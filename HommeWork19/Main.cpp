@@ -13,7 +13,7 @@ int my_common_divider(int num1, int num2) {
     return num1 + num2;
 }
 
-int mirror_number(int num) {
+int my_mirror_number(int num) {
     int n{};
     while (num) {
         n *= 10;
@@ -24,7 +24,7 @@ int mirror_number(int num) {
 }
 
 template <typename T>
-int search_index(T arr[], const int length, T key, int begin = 0) {
+int my_search_index(T arr[], const int length, T key, int begin = 0) {
     for (int k = begin; k < length; k++) {
         if (arr[k] == key) {
             for (int i = length-1; i > 4; i--) {
@@ -65,7 +65,7 @@ int main() {
     Напишите функцию mirror_number, которая принимает число и возвращает его в отражённом виде.
     */
 
-    std::cout << "Задача 2.\nЗеркальное число: " << mirror_number(123456789) << "\n\n";
+    std::cout << "Задача 2.\nЗеркальное число: " << my_mirror_number(123456789) << "\n\n";
 
     /*
     Задача 3
@@ -81,7 +81,7 @@ int main() {
         std::cout << arr1[i] << ", ";
     }
     std::cout << "\b\b }\n";
-    std::cout << "Индекс числа: " << search_index(arr1, size1, 9) << "\n";
+    std::cout << "Индекс числа: " << my_search_index(arr1, size1, 9) << "\n";
     std::cout << "Изменный массив:\n";
     std::cout << "{ ";
     for (int i = 0; i < size1; i++) {
