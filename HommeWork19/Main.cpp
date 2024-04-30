@@ -27,7 +27,7 @@ template <typename T>
 int my_search_index(T arr[], const int length, T key, int begin = 0) {
     for (int k = begin; k < length; k++) {
         if (arr[k] == key) {
-            for (int i = length-1; i > 4; i--) {
+            for (int i = length-1; i > 0; i--) {
                 for (int j = k+1; j < i; j++) {
                     if (arr[j] > arr[j + 1]) {
                         int tmp;
@@ -81,7 +81,7 @@ int main() {
         std::cout << arr1[i] << ", ";
     }
     std::cout << "\b\b }\n";
-    std::cout << "Индекс числа: " << my_search_index(arr1, size1, 9) << "\n";
+    std::cout << "Индекс числа: " << my_search_index(arr1, size1, 10) << "\n";
     std::cout << "Изменный массив:\n";
     std::cout << "{ ";
     for (int i = 0; i < size1; i++) {
